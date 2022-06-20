@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1400px;
+}
+.huy2{
+    background: url(nhom1bb2021.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 750px;
+    position: absolute;
+}
+.huy3 {
+    background-color: rgba(0, 0, 0, 0.856);
+    width: 100%;
+    height: 750px;
+    position: absolute;
+}
+.huy3 h3 {
+    color: rgb(130, 201, 30);
+    box-shadow: 0 5px 10px 0 rgb(130 201 30 / 50%);
+    position: relative;
+    top: 20px;
+    font-size:5em;
+    font-family: arial;
+    text-align: center;
+    z-index: 101;
+    text-align:center ;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+}
+/** pat khác */
+.carousel {
+    height: 750px;
+    perspective: 600px;
+    z-index: 120;
+}
+.carousel .carousel-item {
+    width: 370px;
+    top:-70px;
+}
+.carousel .carousel-item img {
+    width: 100%;
+}
+.carousel .carousel-item h3{
+    margin: -5px 0 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+/** thanh lướt */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(125, 202, 80);
+    border-radius: 5px;
+}
+/* tym */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #042104;
+    animation: animateBgColor 10s linear infinite;
+}
+@keyframes animateBgColor {
+    0% 
+    {
+        filter: hue-rotate(0deg);
+    }
+    100% 
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+.loader {
+    position: relative;
+}
+.loader span {
+    position: absolute;
+    top: 0;
+    left:  -200px;
+    width: 200px;
+    transform-origin: right;
+    transform: rotate(calc(18deg * var(--i)));
+}
+.loader span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: #00ff0a;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(-0.1s * var(--i));
+    box-shadow: 0 0 10px #00ff0a ,
+    0 0 20px #00ff0a ,
+    0 0 40px #00ff0a ,
+    0 0 60px #00ff0a ,
+    0 0 80px #00ff0a ,
+    0 0 100px #00ff0a ;
+}
+@keyframes animate {
+    0% {
+        transform: translateX(0px) scale(0.5);
+    }
+    50% {
+        transform: translateX(200px) scale(1);
+    }
+    100% {
+        transform: translateX(0px) scale(0.5);
+    }
+}
